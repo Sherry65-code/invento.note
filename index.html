@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invetor by Invento | A text Editor by Invento</title>
+</head>
+<body>
+    <div id="header">
+        <img onclick="addheader()" title="Add Header" src="./images/title_ico.svg" alt="" class="but">
+        <img onclick="aligntext('center')" title="Align center" src="./images/center_ico.svg" alt="" class="but">
+        <img onclick="aligntext('left')" title="Align left" src="./images/left_ico.svg" alt="" class="but">
+        <img onclick="aligntext('right')" title="Align right" src="./images/right_ico.svg" alt="" class="but">
+        <img onclick="insertlink()" title="Insert Link" src="./images/link_ico.svg" alt="" class="but">
+        <img onclick="popup_open()" title="Change Background color" src="./images/color_ico.svg" alt="" class="but">
+        <img onclick="save_text()" style="float: right;" title="Save File" src="./images/save_ico.svg" alt="" class="but">
+        <img onclick="print_text()" style="float: right;" title="Print File" src="./images/print_ico.svg" alt="" class="but">
+    </div>
+    <div type="text" id="main" contenteditable spellcheck="false"></div>
+    <script src="js.js"></script>
+    <div id="popup">
+        <div class="in">
+<h4>Custom Editor:-</h4>
+<h5>Change Background colour:-</h5><br>
+<input type="color" id="backcolor" style="border: none;background-color: rgba(240, 248, 255, 0);">
+<button class="button" style="float: right;" onclick="set_back_color()">Set</button>  
+
+<h5>Change colour of text - </h5>
+<input type="color" id="textcolor" style="border: none;background-color: rgba(240, 248, 255, 0);">
+<button class="button" style="float: right;" onclick="set_text_color()">Set</button>
+
+<h5>Change Fonts-</h5>
+<button class="button" onclick="change_font('monospace')">monspace</button>
+<button class="button" onclick="change_font('seoge')">Seouge UI</button>
+<button class="button" onclick="change_font('orignal')">Default</button>
+<button class="button" onclick="change_font('apple')">Apple Font</button>
+<button class="button" onclick="change_font('roman')">Times new Roman</button>
+<button class="button" onclick="change_font('ms')">MS Font</button>
+
+<h5>Change Font style-</h5>
+<button class="button" onclick="change_style('cursive')">Cursive</button>
+<button class="button" onclick="change_style('bold')">Bold</button>
+<button class="button" onclick="change_style('normal')">Normal</button>
+<br><br>
+<h5>Change Font Size:-</h5>
+<input type="text" class="button" placeholder="Type Font size" id="font_size"><br><br>
+<button class="button" onclick="set_font_size()">Set</button>
+<br><br>
+</div>
+<button class="button" style="position: absolute;bottom: 0;
+left: 0;width: 100%;border-radius:0 ;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;" onclick="popup_close()">Close</button>
+</div>
+<div id="splash">
+    
+</div>
+</body>
+</html>
